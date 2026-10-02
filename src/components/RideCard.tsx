@@ -48,14 +48,14 @@ export function RideCard({ ride }: { ride: PublicRide }) {
         </div>
         <SeatsBadge left={ride.seatsLeft} />
       </div>
-      <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
+      <div className="mt-3">
         <RideTimes ride={ride} />
-        <div className="text-right">
-          <div className="text-lg font-bold text-fuchsia-700">{formatPrice(ride.price)}</div>
-          <div className="text-sm text-stone-500">
-            {ride.driverName}
-            {ride.car && ` · ${ride.car}`}
-          </div>
+      </div>
+      <div className="mt-3 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 border-t border-stone-100 pt-3">
+        <div className="text-lg font-bold text-fuchsia-700">{formatPrice(ride.price)}</div>
+        <div className="text-sm text-stone-500">
+          {ride.driverName}
+          {ride.car && ` · ${ride.car}`}
         </div>
       </div>
     </Link>
